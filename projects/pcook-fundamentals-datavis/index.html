@@ -1,13 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
     <title>Fundamentals of Web Design for Data Visualisation</title>
 </head>
+
 <body>
     <h1>Fundamentals of HTML, SVG, CSS and JavaScript for Data Visualisation (Peter Cook)</h1>
+    <p>The whole Git and GitHub "integration" is not likable.</p>
+    <p>This book ends on chapter 7.2.7</p>
+
+    <!-- SVG -->
+
+    <h2>| SVG</h2>
+    <pre>&lt;svg&gt; element:</pre>
+    <svg id="svg" viewBox="-100 -100 200 200" align="center">
+        <g class="ctr">
+            <rect class="ctr rtt" fill="lightblue" height="40" width="10" x="-5" y="-20" />
+            <circle fill="blue" r="5" />
+        </g>
+
+        <rect width="50" height="10" transform="rotate(45) translate(100,0)"></rect>
+    </svg>
+
+    <p>TIL: I hate &lt;svg&gt; elements. I just spend above and beyond 30 minutes to center this rectangle.</p>
+
+    <pre>Double rotation!</pre>
+    <svg id="svg" viewBox="-40 -50 80 80" align="center">
+        <g class="ctr rtt">
+            <rect class="ctr rtt" fill="lightblue" height="40" width="10" x="-5" y="-40" />
+            <circle fill="blue" r="5" />
+        </g>
+
+        <rect width="50" height="10" transform="rotate(45) translate(100,0)"></rect>
+    </svg>
+
+    <div id="cosmetic-div">
+        <button id="btn">Cosmetic Button</button>
+    </div>
+
+    <pre>Starting to realise this book is essentialy a dummy's regurgitation of documentation (but with nice examples :>)</pre>
+
+    <script src="index.js"></script>
+
+    <!-- CSS -->
+    <h2>| CSS</h2>
+    <svg>
+        <g transform="translate(100, 75)">
+            <circle r="50"></circle>
+            <text y="6">Relative</text>
+            <text y="26" style="font-size: 12px;">Positioning</text>
+        </g>
+    </svg>
+
+    <pre>Flexbox</pre>
+    <div id="container">
+        <div class="item">ONE</div>
+        <div class="item">TWO</div>
+        <div class="item">THREE</div>
+        <div class="item">FOUR</div>
+    </div>
+
+    <div id="container">
+        <div class="item">ONE</div>
+        <div class="item">TWO</div>
+    </div>
+
+    <br>
+    <a href="https://app.peterrcook.com/flexplorer/">Flexplorer</a>: Pretty cool.
+
 </body>
+
 </html>

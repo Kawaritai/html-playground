@@ -3,3 +3,72 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 10vw;
 }
+
+svg {
+    border: 2px solid black;
+    margin: auto;
+    overflow: visible;
+}
+
+.ctr {
+    transform-origin: 50% 50%;
+    /*+++++++++++++++++++++++++++*/
+    /* if I remove this rule the pen won't work properly on Chrome for Mac, FF, Safari
+    Will still work properly on Chrome for PC & Opera*/
+    transform-box: fill-box;
+    /*Alternatively  I can use transform-origin:15px 15px;*/
+    /*+++++++++++++++++++++++++++*/
+    /* animation: rotateBox 3s linear infinite; */
+}
+
+.rtt {
+    animation: rotateBox 3s linear infinite;
+}
+
+text {
+    font-family: sans-serif;
+    font-size: 20px;
+    fill: white;
+    text-anchor: middle;
+}
+
+circle {
+    opacity: 0.5;
+}
+
+circle:hover {
+    opacity: 1;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    padding: 1rem;
+    margin: 0.25rem;
+    border: 1px solid #aaa;
+}
+
+.item:hover {
+    background-color: black;
+    color: red;
+    height: fit-content;
+}
+
+@keyframes rotateBox {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.blink {
+    animation: blinker 0.5s ease-in infinite;
+}
+
+@keyframes blinker {
+    50% {
+        color: darkred;
+    }
+}
